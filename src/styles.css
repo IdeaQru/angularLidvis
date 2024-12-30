@@ -1,0 +1,59 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+#topBar {
+    width: 100%;
+    height: 180px;
+    /* Adjusted height for better visibility of larger text */
+    background-color: #797777;
+    /* Dark grey background for the top bar */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centered-container {
+    display: grid;
+    place-items: center;
+    /* Menyelaraskan item di tengah baik vertikal maupun horizontal */
+    height: 100vh;
+    /* Menggunakan seluruh tinggi viewport */
+}
+
+.animated-title {
+    display: flex;
+    justify-content: center;
+    /* Menyelaraskan teks secara horizontal di tengah */
+    flex-wrap: wrap;
+    /* Memungkinkan teks untuk pindah baris */
+    text-align: center;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) rotateZ(0deg);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(10px) rotateZ(180deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) rotateZ(360deg);
+    }
+
+}
